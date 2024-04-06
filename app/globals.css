@@ -1,33 +1,224 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import "hamburgers/dist/hamburgers.min.css";
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+@font-face {
+  font-family: "MADE Outer Sans Alt Black";
+  src: url("/fonts/MADE Outer Sans Alt Black PERSONAL USE.otf")
+    format("opentype");
+}
+
+@font-face {
+  font-family: "MADE Outer Sans Alt Bold";
+  src: url("/fonts/MADE Outer Sans Alt Bold PERSONAL USE.otf")
+    format("opentype");
+}
+
+@font-face {
+  font-family: "MADE Outer Sans Alt Light";
+  src: url("/fonts/MADE Outer Sans Alt Light PERSONAL USE.otf")
+    format("opentype");
+}
+
+@font-face {
+  font-family: "MADE Outer Sans Alt Medium";
+  src: url("/fonts/MADE Outer Sans Alt Medium PERSONAL USE.otf")
+    format("opentype");
+}
+
+@font-face {
+  font-family: "MADE Outer Sans Alt Regular";
+  src: url("/fonts/MADE Outer Sans Alt Regular PERSONAL USE.otf")
+    format("opentype");
+}
+
+@font-face {
+  font-family: "MADE Outer Sans Alt Thin";
+  src: url("/fonts/MADE Outer Sans Alt Thin PERSONAL USE.otf")
+    format("opentype");
+}
+
+@font-face {
+  font-family: "MADE Outer Sans Black";
+  src: url("/fonts/MADE Outer Sans Black PERSONAL USE.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "MADE Outer Sans Bold";
+  src: url("/fonts/MADE Outer Sans Bold PERSONAL USE.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "MADE Outer Sans Light";
+  src: url("/fonts/MADE Outer Sans Light PERSONAL USE.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "MADE Outer Sans Medium";
+  src: url("/fonts/MADE Outer Sans Medium PERSONAL USE.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "MADE Outer Sans Outline Alt Black";
+  src: url("/fonts/MADE Outer Sans Outline Alt Black PERSONAL USE.otf")
+    format("opentype");
+}
+
+@font-face {
+  font-family: "MADE Outer Sans Outline Alt Bold";
+  src: url("/fonts/MADE Outer Sans Outline Alt Bold PERSONAL USE.otf")
+    format("opentype");
+}
+
+@font-face {
+  font-family: "MADE Outer Sans Outline Alt Light";
+  src: url("/fonts/MADE Outer Sans Outline Alt Light PERSONAL USE.otf")
+    format("opentype");
+}
+
+@font-face {
+  font-family: "MADE Outer Sans Outline Alt Medium";
+  src: url("/fonts/MADE Outer Sans Outline Alt Medium PERSONAL USE.otf")
+    format("opentype");
+}
+
+@font-face {
+  font-family: "MADE Outer Sans Outline Alt Regular";
+  src: url("/fonts/MADE Outer Sans Outline Alt Regular PERSONAL USE.otf")
+    format("opentype");
+}
+
+@font-face {
+  font-family: "MADE Outer Sans Outline Alt Thin";
+  src: url("/fonts/MADE Outer Sans Outline Alt Thin PERSONAL USE.otf")
+    format("opentype");
+}
+
+@font-face {
+  font-family: "MADE Outer Sans Outline Black";
+  src: url("/fonts/MADE Outer Sans Outline Black PERSONAL USE.otf")
+    format("opentype");
+}
+
+@font-face {
+  font-family: "MADE Outer Sans Outline Bold";
+  src: url("/fonts/MADE Outer Sans Outline Bold PERSONAL USE.otf")
+    format("opentype");
+}
+
+@font-face {
+  font-family: "MADE Outer Sans Outline Light";
+  src: url("/fonts/MADE Outer Sans Outline Light PERSONAL USE.otf")
+    format("opentype");
+}
+
+@font-face {
+  font-family: "MADE Outer Sans Outline Medium";
+  src: url("/fonts/MADE Outer Sans Outline Medium PERSONAL USE.otf")
+    format("opentype");
+}
+
+@font-face {
+  font-family: "MADE Outer Sans Outline Regular";
+  src: url("/fonts/MADE Outer Sans Outline Regular PERSONAL USE.otf")
+    format("opentype");
+}
+
+@font-face {
+  font-family: "MADE Outer Sans Outline Thin";
+  src: url("/fonts/MADE Outer Sans Outline Thin PERSONAL USE.otf")
+    format("opentype");
+}
+
+@font-face {
+  font-family: "MADE Outer Sans Regular";
+  src: url("/fonts/MADE Outer Sans Regular PERSONAL USE.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "MADE Outer Sans Thin";
+  src: url("/fonts/MADE Outer Sans Thin PERSONAL USE.otf") format("opentype");
+}
+
+.menu-link {
+  width: max-content;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.menu-overlay {
+  clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%);
 }
