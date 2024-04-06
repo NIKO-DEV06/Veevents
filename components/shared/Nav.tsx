@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const Nav = () => {
   return (
-    <nav className="hidden lg:flex gap-[3rem] translate-x-[-5rem]">
+    <nav className="hidden lg:flex gap-[3rem] translate-x-[-7rem]">
       <Link href={"/"} className="hover:opacity-70 duration-200">
         Home
       </Link>

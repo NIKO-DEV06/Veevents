@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
@@ -11,7 +13,6 @@ import { FaXTwitter } from "react-icons/fa6";
 
 const MobileNav = ({ isOpen }: { isOpen: boolean }) => {
   const container = useRef<HTMLDivElement>(null);
-
   const tl = useRef<any>();
 
   useGSAP(
@@ -53,7 +54,6 @@ const MobileNav = ({ isOpen }: { isOpen: boolean }) => {
         <h1 className="absolute right-0 font-made-outline-alt-black text-[7rem] opacity-[0.08] -rotate-45 translate-y-[5rem] hidden md:block translate-x-[5rem]">
           VEEVENTS
         </h1>
-
         <h1 className="absolute right-0 font-made-outline-alt-black text-[7rem] opacity-[0.08] rotate-90 translate-y-[5rem] translate-x-[20rem]">
           VEEVENTS
         </h1>
