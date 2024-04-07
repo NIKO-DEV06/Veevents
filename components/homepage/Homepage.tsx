@@ -2,12 +2,12 @@ import EventsSection from "./EventsSection";
 import Hero from "./Hero";
 import HeroMarquee from "./HeroMarquee";
 
-const Homepage = () => {
+const Homepage = ({ events }: any) => {
   return (
     <section className="">
       <section className="pt-[11rem] md:pt-[10rem] px-[2rem] md:px-[6rem]">
         <Hero />
-        <EventsSection />
+        <EventsSection events={events} />
       </section>
       <HeroMarquee />
     </section>

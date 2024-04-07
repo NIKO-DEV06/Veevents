@@ -20,7 +20,7 @@ const Header = () => {
     : "hamburger--vortex ivert";
   return (
     <>
-      <MobileNav isOpen={isOpen} />
+      <MobileNav isOpen={isOpen} toggleMenu={toggleMenu} />
       <header className="flex justify-between items-center py-[2rem] px-[2rem] md:px-[6rem] bg-[#09090b] fixed w-full border-b-white/50 border-b-[0.5px] z-50 2xl:max-w-[1470px]">
         <Link href={"/"}>
           <Image
