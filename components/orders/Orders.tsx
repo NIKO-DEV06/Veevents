@@ -10,7 +10,7 @@ import { formatDateTime, formatPrice } from "@/lib/utils";
 import { IOrderItem } from "@/lib/database/models/order.model";
 import Search from "../shared/Search";
 
-const Orders = ({ orders }: { orders: IOrderItem }) => {
+const Orders = ({ orders }: { orders: any }) => {
   return (
     <>
       <section className="pt-[10rem] px-[2rem] md:px-[6rem]">
