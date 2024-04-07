@@ -1,7 +1,13 @@
 import Link from "next/link";
 import Collection from "../shared/Collection";
 
-const Profile = ({ organizedEvents }: any) => {
+const Profile = ({
+  organizedEvents,
+  orderedEvents,
+  orders,
+  ordersPage,
+  eventsPage,
+}: any) => {
   return (
     <>
       <section className="pt-[10rem] px-[2rem] md:px-[6rem]">
@@ -18,18 +24,18 @@ const Profile = ({ organizedEvents }: any) => {
         </div>
       </section>
 
-      {/* <section className="my-[5rem] px-[2rem] md:px-[6rem]">
+      <section className="my-[5rem] px-[2rem] md:px-[6rem]">
         <Collection
-          data={events?.data}
+          data={orderedEvents}
           emptyTitle="No Events Tickets purchased yet."
           emptyStateSubtext="No worries - loads of events to explore!"
           collectionType="My_Tickets"
           limit={3}
-          page={1}
+          page={ordersPage}
           urlParamName="ordersPage"
-          totalPages={2}
+          totalPages={orders?.totalPages}
         />
-      </section> */}
+      </section>
 
       <section className="pt-[10rem] px-[2rem] md:px-[6rem]">
         <div className="flex items-end justify-center sm:justify-between border-b-[1px] w-full border-white/50 pb-[2rem]">
@@ -52,9 +58,9 @@ const Profile = ({ organizedEvents }: any) => {
           emptyStateSubtext="Create your events now"
           collectionType="Events_Organized"
           limit={6}
-          page={1}
+          page={eventsPage}
           urlParamName="evnstsPage"
-          totalPages={2}
+          totalPages={organizedEvents?.totalPages}
         />
       </section>
     </>

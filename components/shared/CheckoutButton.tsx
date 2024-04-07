@@ -25,7 +25,7 @@ const CheckoutButton = ({ event }: { event: IEvent }) => {
             <button>
               <Link
                 href={"/sign-in"}
-                className="bg-[#5a3ee5] hover:bg-[#4630b0] duration-300 text-white px-[1.5rem] py-[0.5rem] rounded-md font-semibold hidden sm:flex text-center"
+                className="mb-[0.5rem] mt-[0.2rem] bg-[#5a3ee5] hover:bg-[#4630b0] duration-300 text-white px-[1.5rem] py-[0.5rem] rounded-md font-semibold text-center"
               >
                 Get Ticket
               </Link>

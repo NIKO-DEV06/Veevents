@@ -1,4 +1,5 @@
 import Collection from "../shared/Collection";
+import Search from "../shared/Search";
 
 const EventsSection = ({ events }: any) => {
   return (
@@ -6,7 +7,10 @@ const EventsSection = ({ events }: any) => {
       <h1 className="text-[2rem] lg:text-[2.5rem] font-made-black leading-[2.3rem] lg:leading-[3rem]">
         Trusted by Thousands <br /> of Events
       </h1>
-      <div>Search CategoryFilter</div>
+      <div className="flex flex-col my-[2rem] gap-[1rem]">
+        <Search />
+        CategoryFilter
+      </div>
       <Collection
         data={events?.data}
         emptyTitle="No Events Found."

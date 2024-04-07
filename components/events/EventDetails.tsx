@@ -70,7 +70,7 @@ const EventDetails = ({ event, relatedEvents }: any) => {
               </p>
               <p>{event.description}</p>
               <p className="underline text-[#8676db] hover:text-[#a99de2] cursor-pointer duration-200">
-                {event.url}
+                {event?.url}
               </p>
             </div>
           </div>

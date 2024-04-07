@@ -38,7 +38,7 @@ const Checkout = ({ event, userId }: { event: IEvent; userId: string }) => {
       <button
         type="submit"
         role="link"
-        className="my-[1rem] bg-[#5a3ee5] hover:bg-[#4630b0] duration-300 text-white px-[1.5rem] py-[0.5rem] rounded-md font-semibold text-center"
+        className="mb-[0.5rem] mt-[0.2rem] bg-[#5a3ee5] hover:bg-[#4630b0] duration-300 text-white px-[1.5rem] py-[0.5rem] rounded-md font-semibold text-center"
       >
         {event.isFree ? "Get Ticket" : "Buy Ticket"}
       </button>
