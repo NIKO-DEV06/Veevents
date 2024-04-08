@@ -54,7 +54,7 @@ const MobileNav = ({
 
   return (
     <div ref={container}>
-      <div className="menu-overlay flex flex-col justify-between fixed top-0 bottom-0 w-screen h-screen bg-[#5a3ee5] pt-[11rem] md:pt-[9rem] pb-[7rem] px-[2rem] md:px-[6rem] lg:hidden z-[20]">
+      <div className="menu-overlay flex flex-col justify-between fixed top-0 bottom-0 w-screen h-screen bg-[#5a3ee5] pt-[11rem] md:pt-[9rem] pb-[7rem] md:pb-[4rem] px-[2rem] md:px-[6rem] lg:hidden z-[20]">
         <h1 className="absolute right-0 font-made-outline-alt-black text-[7rem] opacity-[0.08] rotate-45 translate-y-[5rem] translate-x-[5rem]">
           VEEVENTS
         </h1>
@@ -93,6 +93,19 @@ const MobileNav = ({
               </Link>
             </div>
           </div>
+          <SignedOut>
+            <div className="menu-link font-made-alt-black ">
+              <div className="relative menu-link-item-holder">
+                <Link
+                  href={"/sign-in"}
+                  onClick={toggleMenu}
+                  className="underline"
+                >
+                  Sign In
+                </Link>
+              </div>
+            </div>
+          </SignedOut>
         </div>
         <div className="flex flex-col gap-[1.5rem] md:flex-row md:gap-0 md:justify-between">
           <Image

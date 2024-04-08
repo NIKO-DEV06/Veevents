@@ -14,5 +14,5 @@ export default async function Home({ searchParams }: SearchParamProps) {
     limit: 6,
   });
 
-  return <Homepage events={events} />;
+  return <Homepage events={events} page={page} />;
 }

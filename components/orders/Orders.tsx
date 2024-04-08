@@ -1,11 +1,3 @@
-// const Orders = () => {
-//   return (
-//     <section className="pt-[10rem] px-[2rem] md:px-[6rem]">Orders</section>
-//   );
-// };
-
-// export default Orders;
-
 import { formatDateTime, formatPrice } from "@/lib/utils";
 import { IOrderItem } from "@/lib/database/models/order.model";
 import Search from "../shared/Search";

@@ -5,7 +5,7 @@ import { formatDateTime } from "@/lib/utils";
 import Collection from "../shared/Collection";
 import CheckoutButton from "../shared/CheckoutButton";
 
-const EventDetails = ({ event, relatedEvents }: any) => {
+const EventDetails = ({ event, relatedEvents, searchParams }: any) => {
   return (
     <>
       <section className="min-h-screen pt-[9rem] px-[2rem] md:px-[6rem]">
@@ -15,7 +15,7 @@ const EventDetails = ({ event, relatedEvents }: any) => {
             alt="event-img"
             width={1000}
             height={1000}
-            className="h-full min-h-[300px] object-cover object-center border-[1px] border-white/70 rounded-md"
+            className="h-full min-h-[300px] object-cover object-center border-[1px] border-white/50 rounded-md"
           />
           <div className="flex w-full flex-col gap-[1rem] pt-5 md:p-10">
             <div className="flex flex-col gap-[1rem]">
@@ -87,9 +87,9 @@ const EventDetails = ({ event, relatedEvents }: any) => {
           emptyTitle="No Events Found."
           emptyStateSubtext="Come back later or Create your own event under this category!"
           collectionType="All_Events"
-          limit={6}
-          page={1}
-          totalPages={2}
+          limit={3}
+          page={searchParams.page as string}
+          totalPages={relatedEvents?.totalPages}
         />
       </section>
     </>

@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Bai_Jamjuree } from "next/font/google";
 import "./globals.css";
-import Header from "@/components/shared/Header";
 import { ClerkProvider } from "@clerk/nextjs";
+import Footer from "@/components/shared/Footer";
 
 const baiJamjuree = Bai_Jamjuree({
   subsets: ["latin"],
@@ -27,6 +27,7 @@ export default function RootLayout({
           className={`${baiJamjuree.className} bg-[#09090b] text-white overflow-x-hidden 2xl:max-w-[1470px] 2xl:m-auto`}
         >
           {children}
+          <Footer />
         </body>
       </html>
     </ClerkProvider>

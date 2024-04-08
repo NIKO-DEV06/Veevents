@@ -10,9 +10,15 @@ const page = async ({ params: { id }, searchParams }: SearchParamProps) => {
   const relatedEvents = await getRelatedEventsByCategory({
     categoryId: event.category._id,
     eventId: event._id,
-    page: searchParams.pasge as string,
+    page: searchParams.page as string,
   });
-  return <EventDetails event={event} relatedEvents={relatedEvents} />;
+  return (
+    <EventDetails
+      event={event}
+      relatedEvents={relatedEvents}
+      searchParams={searchParams}
+    />
+  );
 };
 
 export default page;
