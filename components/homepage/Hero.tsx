@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const Hero = () => {
   return (
     <section className="flex flex-col items-center justify-between lg:flex-row gap-[1rem] md:gap-0">
@@ -10,9 +12,12 @@ const Hero = () => {
           seamlessly connect with your audience. Elevate your event experience
           today!
         </p>
-        <button className="bg-[#5a3ee5] hover:bg-[#4630b0] duration-300 text-white px-[1.5rem] py-[0.5rem] rounded-md font-semibold">
+        <Link
+          href={"/#all-events"}
+          className="bg-[#5a3ee5] hover:bg-[#4630b0] duration-300 text-white px-[1.5rem] py-[0.5rem] rounded-md font-semibold"
+        >
           Explore Now
-        </button>
+        </Link>
       </div>
       <div>
         <video
