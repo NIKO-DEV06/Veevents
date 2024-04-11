@@ -5,8 +5,14 @@ const Hero = () => {
     <section className="flex flex-col items-center justify-between lg:flex-row gap-[1rem] md:gap-0">
       <div className="">
         <h1 className="text-[2.3rem] lg:text-[3rem] xl:text-[4rem] font-made-black leading-[3rem] lg:leading-[4rem] xl:leading-[5rem]">
-          Discover and Manage Events Hassle-Free with Veevents!
+          Discover and Manage Events Hassle-Free with{" "}
+          <span className="content">
+            <h2 className="text inline-block italic" data-text="Veevents!">
+              Veevents!
+            </h2>
+          </span>
         </h1>
+
         <p className="my-[1.5rem] lg:text-[1.1rem]">
           Explore a world of possibilities, effortlessly organize, and
           seamlessly connect with your audience. Elevate your event experience
