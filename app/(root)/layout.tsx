@@ -13,9 +13,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <>
+    <section className="overflow-x-hidden">
       <Header />
       {children}
-    </>
+    </section>
   );
 }
