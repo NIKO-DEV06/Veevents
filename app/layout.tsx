@@ -24,7 +24,7 @@ export default function RootLayout({
     <ClerkProvider>
       <html lang="en">
         <body
-          className={`${baiJamjuree.className} bg-[#09090b] text-white overflow-x-hidden 2xl:max-w-[1470px] 2xl:m-auto`}
+          className={`${baiJamjuree.className} bg-[#09090b] text-white overflow--hidden overflow-x-none 2xl:max-w-[1470px] 2xl:m-auto`}
         >
           {children}
           <Footer />
